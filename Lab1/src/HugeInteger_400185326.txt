@@ -1,0 +1,112 @@
+import java.util.Random;
+
+public class HugeInteger {
+    private int[] number;         //Number array to store HugeInteger data
+    private boolean isNegative = false; //stores if Hugeint is negative or positive
+
+    protected HugeInteger(String val) throws IllegalArgumentException{
+//        if(val.equals(""))
+//            val = "0";
+        if(!(val.matches("^[0-9]*$") || (val.substring(1).matches("^[0-9]*$") && val.substring(0,1).equals("-")))){
+            //if statement checks if "val" is either all numbers from 0 to 9, or starts with a '-' and the rest are digits from 0-9
+            throw new IllegalArgumentException("You entered a non integer as the parameter.");
+            //if it doesnt match throw error
+        }
+        int startLoop = 0; //see where to start reading the string in case of leading zeroes or negative sign
+        if(val.charAt(0) == '-') { //if it starts with a '-' start at index 1
+            isNegative = true;
+            startLoop = 1;
+        }
+        boolean brokeLoop = false;
+        for (int i = startLoop; i < val.length(); i++) { //keep cycling in string from startLoop and go until we hit a
+//            non zero value (in order to ignore leading zeros)
+            if(val.charAt(i) != '0'){
+                startLoop = i;
+                brokeLoop = true;
+                break;
+            }
+        }
+        if(!brokeLoop)
+            val = "0";
+
+        int size = val.length() - startLoop;
+        number = new int[size];
+        for (int i = startLoop; i < val.length(); i++) {
+            number[i-startLoop] = Integer.parseInt(String.valueOf(val.charAt(i))); //store the digits into the num array
+        }
+    }
+
+    protected HugeInteger(int n) throws IllegalArgumentException{
+        Random random = new Random(); //Instantiate random object
+        if(n<1) //if input is less than 1, throw exception
+            throw new IllegalArgumentException("You entered a parameter of less than 1, please enter a value that is greater than 0");
+        number = new int[n]; //create number array of size n
+        for (int i = 0; i < number.length; i++) { //iterate through number array to store each digit for n number of times
+            int ranVal;
+            if(i == 0){
+                ranVal = random.nextInt(9)+1; //if first digit, select random number between 1 and 9
+            }else{
+                ranVal = random.nextInt(10); //otherwise select a digit between 0 and 9
+            }
+            number[i] = ranVal;
+        }
+    }
+
+    public int getLength(){
+        return this.number.length; //method to get size of huge int
+    }
+
+    HugeInteger add(HugeInteger h){
+        HugeInteger longer;
+        HugeInteger shorter;
+        //create a longer and shorter hugeInt to store the long and short one if they are different sizes
+        int size;
+        if(this.getLength() < h.getLength()){ //if this is shorter than h, set h to the longer, and this to the shorter
+            longer = h;
+            shorter = this;
+        }else{  //otherwise set them up the other way
+            longer = this;
+            shorter = h;
+        }
+        String reverseLonger = "";
+        String reverseShorter = "";
+
+        //the following 2 for loops create a string in the reverse order of the huge int to make operations easier
+
+        for(int i = longer.getString().length() - 1; i >= 0; i--){
+            reverseLonger += longer.getString().charAt(i);
+        }
+        for(int i = shorter.getString().length() - 1; i >= 0; i--){
+            reverseShorter += shorter.getString().charAt(i);
+        }
+
+        //add any leading zeros if the shorter hugeInt is shorter than the longer one
+        for (int i = 0; i < longer.getLength()-shorter.getLength(); i++){
+            reverseShorter += '0';
+        }
+        int carry = 0; //set carry to 0
+        String reverseSum = ""; //create reverse sum string
+        for (int i = 0; i < reverseLonger.length(); i++) {
+            reverseSum += (Character.getNumericValue(reverseLonger.charAt(i)) + Character.getNumericValue(reverseShorter.charAt(i)) + carry)%10;
+            // adds the two digits together and takes its modulus of 10, to get the digit in that column
+            carry = (Character.getNumericValue(reverseLonger.charAt(i)) + Character.getNumericValue(reverseShorter.charAt(i)) + carry)/10;
+            // adds the two digits and takes the integer division of the sum by 10 to get the carry value
+        }
+        if(carry != 0) //if at the end the carry digit is not 0
+            reverseSum += carry; //add the carry value of the string
+        String fixedSum = ""; //create un-reverse sum string
+        for(int i = reverseSum.length() - 1; i >= 0; i--){ //flip the string
+            fixedSum += reverseSum.charAt(i);
+        }
+        return new HugeInteger(fixedSum); //return a new HugeInt with the "fixedSum" string
+    }
+
+
+    String getString(){
+        String val = "";
+        for (int i = 0; i < number.length; i++) {
+            val += number[i];
+        }
+        return val;
+    }
+}
