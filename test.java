@@ -58,13 +58,10 @@ public class HugeInteger {
     }
 
     HugeInteger add(HugeInteger h){
-        if(this.isNegative && !h.isNegative) {
-            this.isNegative = false;
+        if(this.isNegative && !h.isNegative)
             return h.subtract(this);
-        }
-        if(!this.isNegative && h.isNegative) {
+        if(!this.isNegative && h.isNegative)
             return this.subtract(h);
-        }
         HugeInteger longer;
         HugeInteger shorter;
         //create a longer and shorter hugeInt to store the long and short one if they are different sizes
@@ -100,6 +97,7 @@ public class HugeInteger {
             reverseSum += (Character.getNumericValue(reverseLonger.charAt(i)) + Character.getNumericValue(reverseShorter.charAt(i)) + carry)%10;
             // adds the two digits together and takes its modulus of 10, to get the digit in that column
             carry = (Character.getNumericValue(reverseLonger.charAt(i)) + Character.getNumericValue(reverseShorter.charAt(i)) + carry)/10;
+            System.out.println(i);
             // adds the two digits and takes the integer division of the sum by 10 to get the carry value
         }
         if(carry != 0) //if at the end the carry digit is not 0
@@ -115,7 +113,7 @@ public class HugeInteger {
 
     HugeInteger subtract(HugeInteger h) {
         boolean neg = false; //negative
-        if(this.isNegative && h.isNegative){ //neg-neg -3-(-4)
+        if(this.isNegative && h.isNegative){ //neg-neg
             h.isNegative = false;
             return this.add(h);
         }else if(this.isNegative){ //neg-pos
