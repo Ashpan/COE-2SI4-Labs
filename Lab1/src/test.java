@@ -4,11 +4,25 @@ public class test{
         HugeInteger x1;
         HugeInteger x2;
         HugeInteger x3;
-        x1 = new HugeInteger("-9");
-        x2 = new HugeInteger("-3");
-//        System.out.println(x1.toString());
-//        System.out.println(x2.toString());
-        System.out.println(x1.toString() + "-" + x2.toString() + "=" + x1.subtract(x2).toString());
+        String one = "-14";
+        String two = "-12";
+        int onee = 10000;
+        int twoo = 10000;
+
+//        x1 = new HugeInteger(one);
+//        x2 = new HugeInteger(two);
+//        System.out.println(x1.toString() + "-" + x2.toString() + "=" + x1.subtract(x2).toString());
+//        x1 = new HugeInteger(one);
+//        x2 = new HugeInteger(two);
+//        System.out.println(x1.toString() + "+" + x2.toString() + "=" + x1.add(x2).toString());
+        x1 = new HugeInteger(onee);
+        x2 = new HugeInteger(twoo);
+        double start = System.currentTimeMillis();
+        System.out.println(x1.toString() + " - " + x2.toString() + " = " + x1.add(x2).toString());
+        System.out.println(System.currentTimeMillis()-start);
+//        x1 = new HugeInteger(one);
+//        x2 = new HugeInteger(two);
+//        System.out.println("compare: " + x1.compareTo(x2));
 
         //String constructor test cases
         //Valid inputs

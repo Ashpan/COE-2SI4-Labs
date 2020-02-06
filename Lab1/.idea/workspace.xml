@@ -15,13 +15,17 @@
       <file leaf-file-name="HugeInteger.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HugeInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-911">
-              <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+            <state relative-caret-position="314">
+              <caret line="245" selection-start-line="245" selection-end-line="245" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#HugeInteger#0;class#HugeInteger#0" />
                 <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+                <element signature="method#add#0;class#HugeInteger#0" />
+                <element signature="method#subtract#0;class#HugeInteger#0" />
+                <element signature="method#multiply#0;class#HugeInteger#0" />
                 <element signature="method#compareTo#0;class#HugeInteger#0" />
+                <element signature="method#toString#0;class#HugeInteger#0" />
               </folding>
             </state>
           </provider>
@@ -30,26 +34,12 @@
       <file leaf-file-name="test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="657" selection-start-line="657" selection-end-line="657" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HugeIntTiming.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HugeIntTiming.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="180">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding>
+                <element signature="e#227#263#0" />
+                <element signature="e#802#838#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,8 +60,8 @@
       <find>system.out</find>
       <find>getString</find>
       <find>isN</find>
-      <find>system</find>
       <find>neg-ne</find>
+      <find>system</find>
     </findStrings>
     <replaceStrings>
       <replace>System.out.println(&quot;-----------------&quot;);</replace>
@@ -82,10 +72,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/HugeIntTiming.java" />
         <option value="$PROJECT_DIR$/src/TestHugeInt.java" />
         <option value="$PROJECT_DIR$/src/HugeInteger.java" />
         <option value="$PROJECT_DIR$/src/test.java" />
+        <option value="$PROJECT_DIR$/src/HugeIntTiming.java" />
       </list>
     </option>
   </component>
@@ -108,27 +98,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Labs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Labs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Labs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Labs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -149,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test">
+  <component name="RunManager" selected="Application.HugeIntTiming">
     <configuration name="HugeIntTiming" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HugeIntTiming" />
       <module name="Labs" />
@@ -219,8 +189,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
         <item itemvalue="Application.HugeIntTiming" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.TestHugeInt" />
         <item itemvalue="Application.HugeInteger" />
       </list>
@@ -242,12 +212,13 @@
       <workItem from="1579477125653" duration="18084000" />
       <workItem from="1580767160215" duration="17360000" />
       <workItem from="1580833779225" duration="6679000" />
-      <workItem from="1580844280942" duration="3668000" />
+      <workItem from="1580844280942" duration="7398000" />
+      <workItem from="1580922376048" duration="11139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50098000" />
+    <option name="totallyTimeSpent" value="64967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -263,7 +234,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38764045" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2949438" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -300,13 +271,59 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/HugeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4400">
+          <caret line="220" column="9" lean-forward="true" selection-start-line="220" selection-start-column="9" selection-end-line="220" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#HugeInteger#0;class#HugeInteger#0" />
+            <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+            <element signature="method#add#0;class#HugeInteger#0" />
+            <element signature="method#subtract#0;class#HugeInteger#0" />
+            <element signature="method#multiply#0;class#HugeInteger#0" />
+            <element signature="method#compareTo#0;class#HugeInteger#0" />
+            <element signature="method#toString#0;class#HugeInteger#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#227#263#0" />
+            <element signature="e#802#838#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13140">
+          <caret line="657" selection-start-line="657" selection-end-line="657" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HugeIntTiming.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HugeInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="162" selection-start-line="162" selection-end-line="162" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#HugeInteger#0;class#HugeInteger#0" />
             <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+            <element signature="method#add#0;class#HugeInteger#0" />
+            <element signature="method#subtract#0;class#HugeInteger#0" />
+            <element signature="method#multiply#0;class#HugeInteger#0" />
             <element signature="method#compareTo#0;class#HugeInteger#0" />
+            <element signature="method#toString#0;class#HugeInteger#0" />
           </folding>
         </state>
       </provider>
@@ -340,7 +357,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#HugeInteger#0;class#HugeInteger#0" />
             <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+            <element signature="method#add#0;class#HugeInteger#0" />
+            <element signature="method#subtract#0;class#HugeInteger#0" />
+            <element signature="method#multiply#0;class#HugeInteger#0" />
             <element signature="method#compareTo#0;class#HugeInteger#0" />
+            <element signature="method#toString#0;class#HugeInteger#0" />
           </folding>
         </state>
       </provider>
@@ -367,7 +388,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#HugeInteger#0;class#HugeInteger#0" />
             <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+            <element signature="method#add#0;class#HugeInteger#0" />
+            <element signature="method#subtract#0;class#HugeInteger#0" />
+            <element signature="method#multiply#0;class#HugeInteger#0" />
             <element signature="method#compareTo#0;class#HugeInteger#0" />
+            <element signature="method#toString#0;class#HugeInteger#0" />
           </folding>
         </state>
       </provider>
@@ -394,7 +419,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#HugeInteger#0;class#HugeInteger#0" />
             <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+            <element signature="method#add#0;class#HugeInteger#0" />
+            <element signature="method#subtract#0;class#HugeInteger#0" />
+            <element signature="method#multiply#0;class#HugeInteger#0" />
             <element signature="method#compareTo#0;class#HugeInteger#0" />
+            <element signature="method#toString#0;class#HugeInteger#0" />
           </folding>
         </state>
       </provider>
@@ -414,7 +443,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#HugeInteger#0;class#HugeInteger#0" />
             <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+            <element signature="method#add#0;class#HugeInteger#0" />
+            <element signature="method#subtract#0;class#HugeInteger#0" />
+            <element signature="method#multiply#0;class#HugeInteger#0" />
             <element signature="method#compareTo#0;class#HugeInteger#0" />
+            <element signature="method#toString#0;class#HugeInteger#0" />
           </folding>
         </state>
       </provider>
@@ -427,7 +460,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#HugeInteger#0;class#HugeInteger#0" />
             <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+            <element signature="method#add#0;class#HugeInteger#0" />
+            <element signature="method#subtract#0;class#HugeInteger#0" />
+            <element signature="method#multiply#0;class#HugeInteger#0" />
             <element signature="method#compareTo#0;class#HugeInteger#0" />
+            <element signature="method#toString#0;class#HugeInteger#0" />
           </folding>
         </state>
       </provider>
@@ -464,37 +501,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/HugeInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="245" selection-start-line="245" selection-end-line="245" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#HugeInteger#0;class#HugeInteger#0" />
+            <element signature="method#HugeInteger#1;class#HugeInteger#0" />
+            <element signature="method#add#0;class#HugeInteger#0" />
+            <element signature="method#subtract#0;class#HugeInteger#0" />
+            <element signature="method#multiply#0;class#HugeInteger#0" />
+            <element signature="method#compareTo#0;class#HugeInteger#0" />
+            <element signature="method#toString#0;class#HugeInteger#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="20">
           <caret line="657" selection-start-line="657" selection-end-line="657" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HugeIntTiming.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HugeInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-911">
-          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#HugeInteger#0;class#HugeInteger#0" />
-            <element signature="method#HugeInteger#1;class#HugeInteger#0" />
-            <element signature="method#compareTo#0;class#HugeInteger#0" />
-          </folding>
+        <state relative-caret-position="40">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="180">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#227#263#0" />
+            <element signature="e#802#838#0" />
+          </folding>
         </state>
       </provider>
     </entry>

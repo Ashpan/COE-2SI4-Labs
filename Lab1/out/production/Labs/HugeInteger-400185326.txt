@@ -53,28 +53,17 @@ public class HugeInteger {
         }
     }
 
-    private int getLength(){
+    public int getLength(){
         return this.number.length; //method to get size of huge int
     }
 
     HugeInteger add(HugeInteger h){
-        if(this.isNegative && !h.isNegative) { //-this + h
-            HugeInteger temp1 = this.copy();
-            HugeInteger temp2 = h.copy();
-            temp1.isNegative = false;
-            HugeInteger subtract =  temp2.subtract(temp1);
-            if(temp1.compareTo(temp2)==1)
-                subtract.isNegative = true;
-            return subtract;
+        if(this.isNegative && !h.isNegative) {
+            this.isNegative = false;
+            return h.subtract(this);
         }
-        if(!this.isNegative && h.isNegative) { //this + -h
-            HugeInteger temp1 = this.copy();
-            HugeInteger temp2 = h.copy();
-            temp2.isNegative = false;
-            HugeInteger subtract =  temp1.subtract(temp2);
-            if(temp1.compareTo(temp2)==-1)
-                subtract.isNegative = true;
-            return subtract;
+        if(!this.isNegative && h.isNegative) {
+            return this.subtract(h);
         }
         HugeInteger longer;
         HugeInteger shorter;
@@ -87,25 +76,41 @@ public class HugeInteger {
             longer = this;
             shorter = h;
         }
-        StringBuilder answer = new StringBuilder("");
-        int diff = longer.getLength()-shorter.getLength();
-        int carry = 0;
-        for (int i = longer.getLength()-1; i >= 0; i--) {
-            if(i>=diff){
-                answer.insert(0, (longer.number[i] + shorter.number[i-diff] + carry)%10);
-                carry = (longer.number[i] + shorter.number[i-diff] + carry)/10;
-            }else {
-                answer.insert(0, (longer.number[i] + carry) % 10);
-                carry = (longer.number[i] + carry) / 10;
-            }
+        String reverseLonger = "";
+        String reverseShorter = "";
+
+        //the following 2 for loops create a string in the reverse order of the huge int to make operations easier
+
+        for(int i = longer.toString().length() - 1; i >= 0; i--){
+            if(longer.toString().charAt(i) != '-')
+                reverseLonger += longer.toString().charAt(i);
         }
-        if(carry!=0)
-            answer.insert(0, carry);
+        for(int i = shorter.toString().length() - 1; i >= 0; i--){
+            if(shorter.toString().charAt(i) != '-')
+                reverseShorter += shorter.toString().charAt(i);
+        }
 
+        //add any leading zeros if the shorter hugeInt is shorter than the longer one
+        for (int i = 0; i < longer.getLength()-shorter.getLength(); i++){
+            reverseShorter += '0';
+        }
+        int carry = 0; //set carry to 0
+        String reverseSum = ""; //create reverse sum string
+        for (int i = 0; i < reverseLonger.length(); i++) {
+            reverseSum += (Character.getNumericValue(reverseLonger.charAt(i)) + Character.getNumericValue(reverseShorter.charAt(i)) + carry)%10;
+            // adds the two digits together and takes its modulus of 10, to get the digit in that column
+            carry = (Character.getNumericValue(reverseLonger.charAt(i)) + Character.getNumericValue(reverseShorter.charAt(i)) + carry)/10;
+            // adds the two digits and takes the integer division of the sum by 10 to get the carry value
+        }
+        if(carry != 0) //if at the end the carry digit is not 0
+            reverseSum += carry; //add the carry value of the string
         if(this.isNegative && h.isNegative)
-            answer.insert(0, '-');
-
-        return new HugeInteger(answer.toString()); //return a new HugeInt with the "fixedSum" string
+            reverseSum += "-";
+        String fixedSum = ""; //create un-reverse sum string
+        for(int i = reverseSum.length() - 1; i >= 0; i--){ //flip the string
+            fixedSum += reverseSum.charAt(i);
+        }
+        return new HugeInteger(fixedSum); //return a new HugeInt with the "fixedSum" string
     }
 
     HugeInteger subtract(HugeInteger h) {
@@ -130,6 +135,7 @@ public class HugeInteger {
         }else{
             return new HugeInteger("0"); //if they're the same number, subtraction is 0
         }
+
         StringBuilder answer = new StringBuilder(""); //create empty string with the answer
         boolean borrow = false; //borrow variable for sub
         for (int i = bigger.getLength()-1; i >= 0; i--) { //iterate from rightmost element from bigger num
@@ -193,57 +199,52 @@ public class HugeInteger {
     }
 
 
-    private int compareTo(HugeInteger h) {
-        if (this.isNegative && !h.isNegative) { //neg vs pos
-            return -1;
-        } else if (!this.isNegative && h.isNegative) { //pos vs neg
+    int compareTo(HugeInteger h){
+        if(this.isNegative && !h.isNegative){
             return 1;
-        } else if (this.isNegative) { //neg vs neg
-            if (this.getLength() > h.getLength())
+        }else if(!this.isNegative && h.isNegative){
+            return -1;
+        }else if(!this.isNegative && !h.isNegative){
+            if(this.getLength() > h.getLength())
                 return -1;
-            else if (h.getLength() > this.getLength())
+            else if(h.getLength() > this.getLength())
                 return 1;
-            else {
+            else{
                 for (int i = 0; i < this.getLength(); i++) {
-                    if (this.number[i] > h.number[i])
+                    if(this.number[i] > h.number[i])
                         return -1;
-                    else if (h.number[i] > this.number[i])
+                    else if(h.number[i] > this.number[i])
                         return 1;
-                }
-            }
-            return 0;
-        } else {
-            if (this.getLength() > h.getLength())
-                return 1;
-            else if (h.getLength() > this.getLength())
-                return -1;
-            else {
-                for (int i = 0; i < this.getLength(); i++) {
-                    if (this.number[i] > h.number[i])
-                        return 1;
-                    else if (h.number[i] > this.number[i])
-                        return -1;
                 }
             }
             return 0;
         }
+        if(this.getLength() > h.getLength())
+            return 1;
+        else if(h.getLength() > this.getLength())
+            return -1;
+        else{
+            for (int i = 0; i < this.getLength(); i++) {
+                if(this.number[i] > h.number[i])
+                    return 1;
+                else if(h.number[i] > this.number[i])
+                    return -1;
+            }
+        }
+        return 0;
     }
 
     public String toString(){
 
-        StringBuilder val = new StringBuilder("");
+        String val = "";
         if(this.isNegative)
-            val.append('-');
+            val += "-";
         for (int i = 0; i < this.getLength(); i++) {
-            val.append(number[i]);
+            val += number[i];
         }
-        if (val.toString().matches("^[0]+$")) {
-            val = new StringBuilder("0");
+        if (val.matches("^[0]+$")) {
+            val = "0";
         }
-            return val.toString();
-    }
-
-    private HugeInteger copy(){
-        return new HugeInteger(this.toString());
+            return val;
     }
 }
