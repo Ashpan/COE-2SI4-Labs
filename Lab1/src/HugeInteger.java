@@ -193,7 +193,7 @@ public class HugeInteger {
     }
 
 
-    private int compareTo(HugeInteger h) {
+    int compareTo(HugeInteger h) {
         if (this.isNegative && !h.isNegative) { //neg vs pos
             return -1;
         } else if (!this.isNegative && h.isNegative) { //pos vs neg
@@ -243,7 +243,5 @@ public class HugeInteger {
             return val.toString();
     }
 
-    private HugeInteger copy(){
-        return new HugeInteger(this.toString());
-    }
+    private HugeInteger copy(){ return new HugeInteger(this.toString()); }
 }
