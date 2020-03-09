@@ -1,6 +1,6 @@
 public class MyStack {
     myStackNode root;
-    static class myStackNode {
+        static class myStackNode {
         TNode data;
         myStackNode next;
 

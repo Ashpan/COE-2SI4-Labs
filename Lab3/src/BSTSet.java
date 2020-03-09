@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 class TNode{
     int element;
     TNode left;
@@ -7,11 +5,11 @@ class TNode{
     TNode(int i, TNode l, TNode r)
     { element =i; left = l; right = r; }
 }
-public class BSTSet {
-    public TNode root;
+public class BSTSet { //O(n)
+    private TNode root;
     public BSTSet(){
         root = null;
-    }
+    } //O(1)
 //    public oldBSTSet(int[] input){
 //        if(input.length == 0){
 //            root = null;
@@ -29,23 +27,23 @@ public class BSTSet {
         if(input.length == 0){
             root = null;
         }else {
-            root = recConstructor(input, 0, input.length-1);
+            int[] sortedArr = insertionSort(input);
+            root = recConstructor(sortedArr, 0, sortedArr.length-1);
 
         }
     }
-    public TNode recConstructor(int[] input, int start, int end){
-        int[] sortedArr = insertionSort(input);
+    public TNode recConstructor(int[] input, int start, int end){ //O(nlogn)
         if(start>end){
             return null;
         }
         int mid = (start + end)/2;
-        TNode root = new TNode(sortedArr[mid], null, null);
-        root.left = recConstructor(sortedArr, start, mid-1);
-        root.right = recConstructor(sortedArr, mid+1, end);
+        TNode root = new TNode(input[mid], null, null);
+        root.left = recConstructor(input, start, mid-1);
+        root.right = recConstructor(input, mid+1, end);
         return root;
     }
 
-    public boolean isIn(int v){
+    public boolean isIn(int v){ //O(logn)
         if(root == null)
             return false;
         return(recIsIn(root, v));
@@ -62,7 +60,7 @@ public class BSTSet {
         }
     }
 
-    public void add(int v){
+    public void add(int v){ //O(logn)
         if(root == null){
             root = new TNode(v, null, null);
         }else{
@@ -70,7 +68,7 @@ public class BSTSet {
         }
     }
     private TNode recAdd(TNode startNode, int v){ //recursively add function
-        if(startNode == null){
+        if(startNode == null){                      //referenced 2SI4 Lecture Slides to understand how to make it work
             startNode = new TNode(v, null, null);
         }else if(v < startNode.element){
             startNode.left = recAdd(startNode.left, v);
@@ -88,7 +86,7 @@ public class BSTSet {
             return true;
         }
     }
-    private TNode recRemove(TNode startNode, int v){
+    private TNode recRemove(TNode startNode, int v){ //O(logn)
         if(v < startNode.element) //if less, recursively call to the left branch
             startNode.left = recRemove(startNode.left, v);
         else if(v > startNode.element) //if more, recursively call to the right branch
@@ -128,29 +126,14 @@ public class BSTSet {
         return startNode;
     }
 
-//    private int[] storeToArray(TNode node, int[] array, int counter){
-//        if(node==null){
-//            return array;
-//        }
-//        storeToArray(node.left, array, counter);
-//        array[counter] = node.element; counter++;
-//        storeToArray(node.right, array, counter);
-//        return array;
-//    }
-//    public BSTSet newUnion(BSTSet s){
-//        int[] temp1 = new int[this.size()];
-//        int[] temp2 = new int[s.size()];
-//        temp1 = storeToArray(root, temp1, 0);
-//        temp2 = storeToArray(root, temp2, 0);
-//        return new BSTSet();
-//    }
+
     public BSTSet union(BSTSet s){
         BSTSet unionSet = new BSTSet();
         union(unionSet, root);
         union(unionSet, s.root);
         return unionSet;
     }
-    private void union(BSTSet s, TNode startNode){
+    private void union(BSTSet s, TNode startNode){  //O(nlogn+mlogm)
         if(startNode != null){
             s.add(startNode.element);
             union(s, startNode.left);
@@ -158,12 +141,12 @@ public class BSTSet {
         }
     }
 
-    public BSTSet intersection(BSTSet s){
+    public BSTSet intersection(BSTSet s){ //O(nlogn + mlogm)
         BSTSet intersectSet = new BSTSet();
         intersection(intersectSet, s.root);
         return intersectSet;
     }
-    public void intersection(BSTSet s, TNode startNode) {
+    private void intersection(BSTSet s, TNode startNode) {
         if (startNode != null) {
             if (isIn(startNode.element))
                 s.add(startNode.element);
@@ -172,12 +155,12 @@ public class BSTSet {
         }
     }
 
-    public BSTSet difference(BSTSet s){
+    public BSTSet difference(BSTSet s){ //O(nlogn + mlogm)
         BSTSet differenceSet = new BSTSet();
         difference(differenceSet, this.root, s);
         return differenceSet;
     }
-    public void difference(BSTSet s, TNode startNode, BSTSet other) {
+    private void difference(BSTSet s, TNode startNode, BSTSet other) {
         if (startNode != null) {
             if (!other.isIn(startNode.element))
                 s.add(startNode.element);
@@ -190,7 +173,7 @@ public class BSTSet {
         if(root == null)
             return 0;
         return(size(root, 0));
-    }
+    } //O(n)
     private int size(TNode startNode, int counter){
         if(startNode!=null) {
             counter++;
@@ -202,7 +185,7 @@ public class BSTSet {
 
     public int height () {
         return recHeight(this.root);
-    }
+    } //O(n)
 
     private int recHeight(TNode startNode) {
         if (startNode == null) {
@@ -230,7 +213,7 @@ public class BSTSet {
         }
     }
 
-    public void printNonRec() {
+    public void printNonRec() { //O(n)
         System.out.print("The set elements are: ");
         MyStack stack = new MyStack();
         TNode currNode = root;
@@ -265,7 +248,25 @@ public class BSTSet {
             }
             arr[j + 1] = key;
         }
-        return arr;
+        int temp = arr[arr.length-1];
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] != temp) {
+                count++;
+            }
+            temp = arr[i];
+        }
+        int[] noRep = new int[count];
+        temp = arr[arr.length-1];
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] != temp) {
+                noRep[count] = arr[i];
+                count++;
+            }
+            temp = arr[i];
+        }
+        return noRep;
     }
 }
 

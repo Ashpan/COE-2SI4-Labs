@@ -15,36 +15,34 @@
       <file leaf-file-name="BSTSet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BSTSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="269" selection-start-line="269" selection-end-line="269" />
+            <state>
               <folding>
-                <element signature="e#235#268#0" />
-                <element signature="method#recConstructor#0;class#BSTSet#0" />
-                <element signature="method#isIn#0;class#BSTSet#0" />
-                <element signature="method#recIsIn#0;class#BSTSet#0" />
-                <element signature="method#add#0;class#BSTSet#0" />
-                <element signature="method#recAdd#0;class#BSTSet#0" />
                 <element signature="method#remove#0;class#BSTSet#0" />
-                <element signature="method#recRemove#0;class#BSTSet#0" />
                 <element signature="method#minVal#0;class#BSTSet#0" />
                 <element signature="method#maxVal#0;class#BSTSet#0" />
                 <element signature="method#removeMinVal#0;class#BSTSet#0" />
-                <element signature="method#union#0;class#BSTSet#0" />
-                <element signature="method#union#1;class#BSTSet#0" />
-                <element signature="method#intersection#0;class#BSTSet#0" />
-                <element signature="method#intersection#1;class#BSTSet#0" />
-                <element signature="method#difference#0;class#BSTSet#0" />
-                <element signature="method#difference#1;class#BSTSet#0" />
                 <element signature="method#size#0;class#BSTSet#0" />
-                <element signature="method#size#1;class#BSTSet#0" />
-                <element signature="e#5936#5937#0" expanded="true" />
-                <element signature="e#5979#5980#0" expanded="true" />
-                <element signature="method#recHeight#0;class#BSTSet#0" />
                 <element signature="method#printBSTSet#0;class#BSTSet#0" />
                 <element signature="method#printBSTSet#1;class#BSTSet#0" />
-                <element signature="method#printNonRec#0;class#BSTSet#0" />
-                <element signature="method#insertionsort#0;class#BSTSet#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestBSTSet_2020.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TestBSTSet_2020.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="153" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestBSTSet_2020.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TestBSTSet_2020.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2140">
+              <caret line="107" column="47" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -52,17 +50,8 @@
       <file leaf-file-name="BSTSetTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BSTSetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SortedArrayToBST.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SortedArrayToBST.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="23" column="25" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="1700">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
             </state>
           </provider>
         </entry>
@@ -70,8 +59,8 @@
       <file leaf-file-name="MyStack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+            <state relative-caret-position="40">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -97,9 +86,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/TNode.java" />
-        <option value="$PROJECT_DIR$/src/MyStack.java" />
         <option value="$PROJECT_DIR$/src/SortedArrayToBST.java" />
         <option value="$PROJECT_DIR$/src/BSTSetTest.java" />
+        <option value="$PROJECT_DIR$/src/MyStack.java" />
+        <option value="$PROJECT_DIR$/src/TestBSTSet_2020.java" />
         <option value="$PROJECT_DIR$/src/BSTSet.java" />
       </list>
     </option>
@@ -115,7 +105,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1055" />
-    <option name="y" value="-13" />
+    <option name="y" value="-15" />
     <option name="width" value="820" />
     <option name="height" value="880" />
   </component>
@@ -124,9 +114,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,6 +132,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BSTSetTest">
+  <component name="RunManager" selected="Application.TestBSTSet_2020">
     <configuration name="BSTSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BSTSet" />
       <module name="Lab2" />
@@ -177,6 +167,11 @@
     </configuration>
     <configuration name="SortedArrayToBST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SortedArrayToBST" />
+      <module name="Lab2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="TestBSTSet_2020" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestBSTSet_2020" />
       <module name="Lab2" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -225,9 +220,11 @@
       <item itemvalue="Application.BSTSet" />
       <item itemvalue="Application.BSTSetTest" />
       <item itemvalue="Application.SortedArrayToBST" />
+      <item itemvalue="Application.TestBSTSet_2020" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestBSTSet_2020" />
         <item itemvalue="Application.BSTSetTest" />
         <item itemvalue="Application.BSTSet" />
         <item itemvalue="Application.SortedArrayToBST" />
@@ -247,19 +244,20 @@
       <workItem from="1582125607455" duration="25739000" />
       <workItem from="1582220337285" duration="30000" />
       <workItem from="1582220394113" duration="8232000" />
+      <workItem from="1582328808790" duration="2533000" />
+      <workItem from="1582583675044" duration="7500000" />
+      <workItem from="1583729085654" duration="57000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34001000" />
+    <option name="totallyTimeSpent" value="44091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -267,11 +265,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.41853932" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.0" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286517" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.35644937" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36174497" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -285,6 +283,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,41 +294,140 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/BSTSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state>
           <folding>
-            <element signature="e#235#268#0" />
-            <element signature="method#recConstructor#0;class#BSTSet#0" />
-            <element signature="method#isIn#0;class#BSTSet#0" />
-            <element signature="method#recIsIn#0;class#BSTSet#0" />
-            <element signature="method#add#0;class#BSTSet#0" />
-            <element signature="method#recAdd#0;class#BSTSet#0" />
             <element signature="method#remove#0;class#BSTSet#0" />
-            <element signature="method#recRemove#0;class#BSTSet#0" />
             <element signature="method#minVal#0;class#BSTSet#0" />
             <element signature="method#maxVal#0;class#BSTSet#0" />
             <element signature="method#removeMinVal#0;class#BSTSet#0" />
-            <element signature="method#union#0;class#BSTSet#0" />
-            <element signature="method#union#1;class#BSTSet#0" />
-            <element signature="method#intersection#0;class#BSTSet#0" />
-            <element signature="method#intersection#1;class#BSTSet#0" />
-            <element signature="method#difference#0;class#BSTSet#0" />
-            <element signature="method#difference#1;class#BSTSet#0" />
             <element signature="method#size#0;class#BSTSet#0" />
-            <element signature="method#size#1;class#BSTSet#0" />
-            <element signature="e#5936#5937#0" expanded="true" />
-            <element signature="e#5979#5980#0" expanded="true" />
-            <element signature="method#recHeight#0;class#BSTSet#0" />
             <element signature="method#printBSTSet#0;class#BSTSet#0" />
             <element signature="method#printBSTSet#1;class#BSTSet#0" />
-            <element signature="method#printNonRec#0;class#BSTSet#0" />
-            <element signature="method#insertionsort#0;class#BSTSet#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestBSTSet_2020.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestBSTSet_2020.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2140">
+          <caret line="107" column="47" lean-forward="true" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BSTSetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BSTSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="method#remove#0;class#BSTSet#0" />
+            <element signature="method#minVal#0;class#BSTSet#0" />
+            <element signature="method#maxVal#0;class#BSTSet#0" />
+            <element signature="method#removeMinVal#0;class#BSTSet#0" />
+            <element signature="method#size#0;class#BSTSet#0" />
+            <element signature="method#printBSTSet#0;class#BSTSet#0" />
+            <element signature="method#printBSTSet#1;class#BSTSet#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestBSTSet_2020.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BSTSetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestBSTSet_2020.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2600">
+          <caret line="130" column="34" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BSTSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5380">
+          <caret line="269" selection-start-line="269" selection-end-line="269" />
+          <folding>
+            <element signature="method#remove#0;class#BSTSet#0" />
+            <element signature="method#minVal#0;class#BSTSet#0" />
+            <element signature="method#maxVal#0;class#BSTSet#0" />
+            <element signature="method#removeMinVal#0;class#BSTSet#0" />
+            <element signature="method#size#0;class#BSTSet#0" />
+            <element signature="method#printBSTSet#0;class#BSTSet#0" />
+            <element signature="method#printBSTSet#1;class#BSTSet#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BSTSetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SortedArrayToBST.java" />
+    <entry file="file://$PROJECT_DIR$/src/MyStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BSTSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="method#remove#0;class#BSTSet#0" />
+            <element signature="method#minVal#0;class#BSTSet#0" />
+            <element signature="method#maxVal#0;class#BSTSet#0" />
+            <element signature="method#removeMinVal#0;class#BSTSet#0" />
+            <element signature="method#size#0;class#BSTSet#0" />
+            <element signature="method#printBSTSet#0;class#BSTSet#0" />
+            <element signature="method#printBSTSet#1;class#BSTSet#0" />
           </folding>
         </state>
       </provider>
@@ -349,32 +447,13 @@
         <state relative-caret-position="140">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#235#268#0" />
-            <element signature="method#recConstructor#0;class#BSTSet#0" />
-            <element signature="method#isIn#0;class#BSTSet#0" />
-            <element signature="method#recIsIn#0;class#BSTSet#0" />
-            <element signature="method#add#0;class#BSTSet#0" />
-            <element signature="method#recAdd#0;class#BSTSet#0" />
             <element signature="method#remove#0;class#BSTSet#0" />
-            <element signature="method#recRemove#0;class#BSTSet#0" />
             <element signature="method#minVal#0;class#BSTSet#0" />
             <element signature="method#maxVal#0;class#BSTSet#0" />
             <element signature="method#removeMinVal#0;class#BSTSet#0" />
-            <element signature="method#union#0;class#BSTSet#0" />
-            <element signature="method#union#1;class#BSTSet#0" />
-            <element signature="method#intersection#0;class#BSTSet#0" />
-            <element signature="method#intersection#1;class#BSTSet#0" />
-            <element signature="method#difference#0;class#BSTSet#0" />
-            <element signature="method#difference#1;class#BSTSet#0" />
             <element signature="method#size#0;class#BSTSet#0" />
-            <element signature="method#size#1;class#BSTSet#0" />
-            <element signature="e#5936#5937#0" expanded="true" />
-            <element signature="e#5979#5980#0" expanded="true" />
-            <element signature="method#recHeight#0;class#BSTSet#0" />
             <element signature="method#printBSTSet#0;class#BSTSet#0" />
             <element signature="method#printBSTSet#1;class#BSTSet#0" />
-            <element signature="method#printNonRec#0;class#BSTSet#0" />
-            <element signature="method#insertionsort#0;class#BSTSet#0" />
           </folding>
         </state>
       </provider>
@@ -393,58 +472,46 @@
     <entry file="file://$PROJECT_DIR$/Lab2.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyStack.java">
+    <entry file="file://$PROJECT_DIR$/src/SortedArrayToBST.java" />
+    <entry file="file://$PROJECT_DIR$/src/TestBSTSet_2020.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+        <state>
+          <caret selection-end-line="153" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SortedArrayToBST.java">
+    <entry file="file://$PROJECT_DIR$/src/MyStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="40">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BSTSetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="1700">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestBSTSet_2020.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2140">
+          <caret line="107" column="47" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BSTSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="269" selection-start-line="269" selection-end-line="269" />
+        <state>
           <folding>
-            <element signature="e#235#268#0" />
-            <element signature="method#recConstructor#0;class#BSTSet#0" />
-            <element signature="method#isIn#0;class#BSTSet#0" />
-            <element signature="method#recIsIn#0;class#BSTSet#0" />
-            <element signature="method#add#0;class#BSTSet#0" />
-            <element signature="method#recAdd#0;class#BSTSet#0" />
             <element signature="method#remove#0;class#BSTSet#0" />
-            <element signature="method#recRemove#0;class#BSTSet#0" />
             <element signature="method#minVal#0;class#BSTSet#0" />
             <element signature="method#maxVal#0;class#BSTSet#0" />
             <element signature="method#removeMinVal#0;class#BSTSet#0" />
-            <element signature="method#union#0;class#BSTSet#0" />
-            <element signature="method#union#1;class#BSTSet#0" />
-            <element signature="method#intersection#0;class#BSTSet#0" />
-            <element signature="method#intersection#1;class#BSTSet#0" />
-            <element signature="method#difference#0;class#BSTSet#0" />
-            <element signature="method#difference#1;class#BSTSet#0" />
             <element signature="method#size#0;class#BSTSet#0" />
-            <element signature="method#size#1;class#BSTSet#0" />
-            <element signature="e#5936#5937#0" expanded="true" />
-            <element signature="e#5979#5980#0" expanded="true" />
-            <element signature="method#recHeight#0;class#BSTSet#0" />
             <element signature="method#printBSTSet#0;class#BSTSet#0" />
             <element signature="method#printBSTSet#1;class#BSTSet#0" />
-            <element signature="method#printNonRec#0;class#BSTSet#0" />
-            <element signature="method#insertionsort#0;class#BSTSet#0" />
           </folding>
         </state>
       </provider>
