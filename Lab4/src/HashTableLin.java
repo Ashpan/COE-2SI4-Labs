@@ -24,7 +24,7 @@ public class HashTableLin {
 
     public int insertCount(int n){
         if(((double)(elems+1))/((double) size) > load){ rehash(); }
-        int probes = 0;
+        int probes = 1;
         if(!isIn(n)){
             int index = n%size;
             while(table[index] != 0){
@@ -33,23 +33,26 @@ public class HashTableLin {
             }
             table[index] = n;
             elems++;
-            probes++;
         }
         return probes;
     }
 
     private void rehash(){
+        int oldElems = elems;
         int biggerSize = nextPrime(this.size*2);
         size = biggerSize;
         int[] oldTable = deepCopy(table);
         table = new int[biggerSize];
         for (int i:oldTable)
             insert(i);
+        elems = oldElems;
     }
 
     public boolean isIn(int n){
-        for(int i:table) {
-            if(i == n){ return true; }
+        int startIndex = n%size;
+        for (int i = 0; i <= table.length; i++) {
+            if(table[(startIndex+i)%size] == n)
+                return true;
         }
         return false;
     }

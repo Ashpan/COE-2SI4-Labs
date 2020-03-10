@@ -26,7 +26,7 @@ public class HashTableQuad {
 
     public int insertCount(int n){
         if(((double)(elems+1))/((double) size) > load){ rehash(); }
-        int probes = 0;
+        int probes = 1;
         if(!isIn(n)){
             int i = 0;
             int index = (n+(i*i))%size;
@@ -35,26 +35,29 @@ public class HashTableQuad {
                 probes++;
                 index = (n+(i*i))%size;
             }
-            System.out.println(i);
             table[index] = n;
             elems++;
-            probes++;
         }
         return probes;
     }
 
     private void rehash(){
+        int oldElems = elems;
         int biggerSize = nextPrime(this.size*2);
         size = biggerSize;
         int[] oldTable = deepCopy(table);
         table = new int[biggerSize];
         for (int i:oldTable)
             insert(i);
+        elems = oldElems;
     }
 
-    private boolean isIn(int n){
-        for(int i:table) {
-            if(i == n){ return true; }
+    public boolean isIn(int n){
+        int startIndex = n%size;
+        int i = 0;
+        while(table[(startIndex+(i*i++))%size] == n) {
+            if(table[(startIndex+(i*i++))%size] == n)
+                return true;
         }
         return false;
     }
