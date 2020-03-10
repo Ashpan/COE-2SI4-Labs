@@ -49,10 +49,10 @@ public class TestHashTable {
         for (double load : loadArr) {
             int probes = 0;
             int count = 0;
-            for (int rep = 0; rep < 100; rep++) {
-                HashTableLin linearHash = new HashTableLin(100000, load);
-                for (int i = 0; i < 100000; i++) {
-                    int ranVal = ran.nextInt(10000000);
+            for (int rep = 0; rep < 3; rep++) {
+                HashTableLin linearHash = new HashTableLin(10000, load);
+                for (int i = 0; i < 10000; i++) {
+                    int ranVal = ran.nextInt(1000000);
                     if (!linearHash.isIn(ranVal)) {
                         probes += linearHash.insertCount(ranVal);
                         count++;
@@ -68,10 +68,10 @@ public class TestHashTable {
         for (double load : loadArr) {
             int probes = 0;
             int count = 0;
-            for (int rep = 0; rep < 100; rep++) {
-                HashTableQuad quadHash = new HashTableQuad(100000, load);
+            for (int rep = 0; rep < 10; rep++) {
+                HashTableQuad quadHash = new HashTableQuad(10000, load);
                 for (int i = 0; i < 100000; i++) {
-                    int ranVal = ran.nextInt(10000000);
+                    int ranVal = ran.nextInt(1000000);
                     if (!quadHash.isIn(ranVal)) {
                         probes += quadHash.insertCount(ranVal);
                         count++;
