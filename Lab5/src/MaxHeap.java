@@ -43,6 +43,9 @@ public class MaxHeap {
     private boolean isHeap(int index){
         int left = index*2+1;
         int right = index*2+2;
+        if(left>=heap.length){
+            return true;
+        }
         return((heap[left] == null || heap[index] >= heap[left]) && (heap[right] == null || heap[index] >= heap[right]));
     }
 
@@ -51,41 +54,37 @@ public class MaxHeap {
         int max = heap[0];
         heap[0] = heap[currSize-1];
         heap[currSize-1] = null;
-        boolean dontChange = false;
         int current = 0;
         while(!isHeap(current)){
-            
             int left = current*2+1;
             int right = current*2+2;
-            if(left>currSize-2){
-                dontChange = true;
-            }else if(heap[left] != null && heap[left] > heap[current]){
-                int temp = heap[left];
-                heap[left] = heap[current];
-                heap[current] = temp;
-                current = current*2+1;
-            }else if(heap[left] == null){
-                dontChange = true;
-            }else if(heap[right] != null && heap[right] > heap[current]){
-                int temp = heap[right];
-                heap[right] = heap[current];
-                heap[current] = temp;
-                current = current*2+2;
-            }else if(heap[right] == null){
-                dontChange = true;
-            }else{
-                dontChange = true;
-            }
+            if(heap[left] != null){
+                if(heap[right] == null){
+                    int temp = heap[left];
+                    heap[left] = heap[current];
+                    heap[current] = temp;
+                    current = left;
+                }else {
+                    int index = 0;
+                    if(heap[left] >= heap[right])
+                        index = left;
+                    else
+                        index = right;
+                    int temp = heap[index];
+                    heap[index] = heap[current];
+                    heap[current] = temp;
+                    current = index;
+                }
+            }else
+                break;
         }
         currSize--;
         return max;
     }
     public static void heapsort(Integer[] arrayToSort){
         MaxHeap sorted = new MaxHeap(arrayToSort);
-        System.out.println(sorted.toString());
         for (int i = sorted.currSize-1; i >= 0; i--) {
             arrayToSort[i] = sorted.deleteMax();
-            System.out.println(Arrays.toString(arrayToSort) + " " + arrayToSort[i]);
         }
     }
     public String toString(){
@@ -117,23 +116,22 @@ public class MaxHeap {
     }
 
     public static void main(String[] args) {
-//        MaxHeap heap = new MaxHeap(5);
-//        System.out.println(heap.toString());
-//        heap.insert(1);
-//        heap.insert(2);
-//        heap.insert(3);
-//        heap.insert(4);
-//        heap.insert(5);
-//        System.out.println(heap.toString());
-//        System.out.println(heap.deleteMax());
-//        System.out.println(heap.toString());
+        MaxHeap heap = new MaxHeap(5);
+        System.out.println(heap.toString());
+        heap.insert(1);
+        heap.insert(2);
+        heap.insert(3);
+        heap.insert(4);
+        heap.insert(5);
+        System.out.println(heap.toString());
+        System.out.println(heap.deleteMax());
+        System.out.println(heap.toString());
         Integer[] test = new Integer[] {5,345,5,543,634,5,334,2,34,1234,74};
         System.out.println(Arrays.toString(test));
-        System.out.println("--------------------");
-//        MaxHeap newHeap = new MaxHeap(test);
-//        System.out.println(newHeap.toString());
+        MaxHeap newHeap = new MaxHeap(test);
+        System.out.println(newHeap.toString());
         heapsort(test);
-//        System.out.println(Arrays.toString(test));
+        System.out.println(Arrays.toString(test));
 
 
     }
